@@ -1,1 +1,5 @@
 <h1>hello</h1>
+<% @game.participants.each do |participant|%>
+  <%= participant.player.username %>
+  <br>
+<%end%>
