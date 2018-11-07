@@ -14,7 +14,9 @@ class GamesController < ApplicationController
 
   def play
     @game = Game.all.last
-    render "play"
+    req = Request.new
+    @api_goodies = req.process_request
+    render "play" 
   end 
 
   private
