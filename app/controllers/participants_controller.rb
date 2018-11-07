@@ -1,4 +1,4 @@
-class ParticipantsController < GamesController 
+class ParticipantsController < Application_controller 
   #view participant stats 
   #index show 
   def new 

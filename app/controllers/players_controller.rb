@@ -1,4 +1,4 @@
-class PlayersController < GamesController 
+class PlayersController < ApplicationController 
   #view player stats 
   #index show 
   def index
