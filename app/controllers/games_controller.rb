@@ -12,6 +12,11 @@ class GamesController < ApplicationController
     redirect_to new_participant_path
   end 
 
+  def play
+    @game = Game.all.last
+    render "play"
+  end 
+
   private
 
   def game_params
