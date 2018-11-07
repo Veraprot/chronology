@@ -1,11 +1,20 @@
 class GamesController < ApplicationController 
   def index
     @game = Game.all
-    render 'index'
   end 
 
   def new 
     @game = Game.new
-    #inside run game logic 
+  end 
+
+  def create
+    @game = Game.create(number_of_players: 0)
+    redirect_to new_participant_path
+  end 
+
+  private
+
+  def game_params
+    params.require(:game).permit(:number_of_players)
   end 
 end 

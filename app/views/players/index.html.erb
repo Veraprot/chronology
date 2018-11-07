@@ -1,0 +1,6 @@
+<h1>Player stats</h1>
+<% @players.each do |player|%>
+  <p> <%= player.username %> : <%= player.rating%>
+<% end %>
+<br>
+<%= link_to 'new game', new_player_path %>

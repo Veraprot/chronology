@@ -1,1 +1,7 @@
-<h1>new game</h1>
+<h1>new game page</h1>
+
+<%= form_for @game do |f| %>
+  <%= f.label :number_of_players %><br/>
+  <%= f.text_field :number_of_players %><br/>
+  <%= f.submit %>
+<% end %>
