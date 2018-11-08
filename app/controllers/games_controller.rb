@@ -21,10 +21,7 @@ class GamesController < ApplicationController
 
   def choose_time_period
     req = Request.new(params[:begin_date], params[:end_date])
-  #     req.process_request
-  #     @api_goodies = choose_time_period
-      redirect_to games_play_path 
-
+    redirect_to games_play_path 
   end 
 
   private
