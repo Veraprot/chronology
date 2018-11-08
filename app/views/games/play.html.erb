@@ -14,9 +14,10 @@
 <% end %>
 <div id="results"></div> 
 
-
 <h1>aaaaand break!</h1>
 
 
-<%= @api_goodies %>
+<%= @card.each do |card| %>
+  <%=card.date%> <%= card.event %>
+<% end %>
 
