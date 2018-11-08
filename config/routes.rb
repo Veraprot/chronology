@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'games#new'
 
   get '/games/play', to: 'games#play'
+  post '/games/play', to: 'games#choose_time_period'
 
   resources :games
   resources :players
