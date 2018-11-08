@@ -14,7 +14,7 @@ class GamesController < ApplicationController
 
   def play
     @game = Game.all.last
-    req = Request.new(19549494, 19600101.to_i)
+    req = Request.new(19549494, 19600101)
     @api_goodies = req.process_request
     render "play", layout: false
   end 
