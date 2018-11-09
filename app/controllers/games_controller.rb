@@ -15,7 +15,17 @@ class GamesController < ApplicationController
   def play
     game = Game.all.last
     @participants = game.participants
-    @card = Card.all
+    generate_question
     render "play"
+  end 
+
+  def generate_question
+    @rand_id = rand(Card.count)
+    @random_card = Card.find_by(id: @rand_id) 
+  end 
+
+  def skip_question 
+    generate_question
+    #theres a lot of weird info in the api so let users skip the question 
   end 
 end 

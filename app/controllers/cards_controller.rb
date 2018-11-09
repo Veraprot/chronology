@@ -7,8 +7,4 @@ class CardsController < ApplicationController
     req = Request.new(params[:begin_date], params[:end_date])
     redirect_to games_play_path 
   end
-
-  def show 
-    @card = Card.all
-  end 
 end 
