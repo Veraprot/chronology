@@ -3,10 +3,15 @@ Rails.application.routes.draw do
   root 'games#new'
 
   get '/games/play', to: 'games#play'
-  post '/games/play', to: 'games#choose_time_period'
+  # post '/games/play', to: 'games#choose_time_period'
 
   resources :games
   resources :players
   resources :participants
+  
+  get '/cards/build_cards', to: 'cards#build_cards'
+  post '/cards/show', to: 'cards#choose_time_period'
+
+  get '/cards/show', to: 'cards#show'
   
 end
