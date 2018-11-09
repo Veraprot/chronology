@@ -13,14 +13,9 @@ class GamesController < ApplicationController
   end 
 
   def play
-    @game = Game.all.last
+    game = Game.all.last
+    @participants = game.participants
     @card = Card.all
-    render "play", layout: false
+    render "play"
   end 
-
-  # def choose_time_period
-  #   req = Request.new(params[:begin_date], params[:end_date])
-  #   redirect_to games_play_path 
-  # end 
- 
 end 
