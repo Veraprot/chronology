@@ -16,7 +16,7 @@ class ParticipantsController < ApplicationController
       game.save
       redirect_to new_participant_path
     else 
-      redirect_to games_play_path
+      redirect_to cards_build_cards_path
     end 
   end 
 end 
