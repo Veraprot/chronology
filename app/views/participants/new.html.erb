@@ -1,0 +1,7 @@
+<p> <%= @game.number_of_players%> </p>
+<h1>add participant</h1>
+<%= form_for @participant do |f| %>
+  <%= f.label :player_name %><br/>
+  <%= f.text_field :player_name %><br/>
+  <%= f.submit %>
+<% end %>

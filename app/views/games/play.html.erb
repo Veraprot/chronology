@@ -1,0 +1,10 @@
+<h1>play game finally</h1>
+<% @participants.each do |participant| %>
+<%= participant.player.id %>:
+<%= participant.player.username %>
+<br>
+<%end %>
+
+<p><%= @rand_id %></p>
+<p><%= @random_card.event %></p>
+
